@@ -21,11 +21,13 @@ findShow(show).then(showInfo=>{
 
 function getShowHTML(obj){
     return `
-    <div class="show-img"><img src="${obj.image.medium}"></div>
+    <div class = "show">
     <div class="show-title">${obj.name}</div>
+    <div class="show-img"><img src="${obj.image.medium}"></div>
     <div class="show-summary">${obj.summary}</div>
     ${obj._embedded.seasons.map(season =>{
-        return `<div class="show-season">Season: ${season.number}</div>`
+        return `<div class="show-season"><a class="season-link" href="${season.url}">Season: ${season.number}</a></div>`
     }).join('')}
+    </div>
     `;
 }

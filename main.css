@@ -1,0 +1,60 @@
+/* takes content size, padding, and border into account when determing size of content */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  background-color: white;
+}
+
+/* remove margins on typography to keep margins consistent */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+img {
+  width: 100px;
+}
+
+.show {
+  margin: 0.5em;
+  padding: 0.5em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2rem auto 13rem auto;
+  grid-gap: 0.5em;
+}
+
+.show-title,
+.show-img,
+.show-summary {
+  grid-column: 1/-1;
+}
+
+.show-summary {
+  overflow-y: auto;
+}
+
+.show-season {
+  border: 1px solid black;
+  padding: 0.25em;
+}
+
+.season-link {
+  text-decoration: none;
+  color: black;
+}
+
+.season-link:hover,
+.season-link:focus {
+  color: red;
+}
