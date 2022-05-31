@@ -49,6 +49,7 @@ img {
   grid-template-rows: 2rem auto;
   grid-gap: 0.5em;
   border: 1px solid black;
+  border-radius: 0.4rem;
 }
 
 .show-title,
@@ -65,7 +66,7 @@ img {
 
 .show-summary {
   overflow-y: auto;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .show-season {
