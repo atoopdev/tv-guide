@@ -29,6 +29,13 @@ img {
   width: 100px;
 }
 
+.search-bar {
+  margin: 0.5em;
+  padding: 0.5em;
+
+  font-size: 1.25rem;
+}
+
 #tvguide {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
