@@ -21,17 +21,27 @@ p {
   margin: 0;
 }
 
+p {
+  margin-bottom: 0.5em;
+}
+
 img {
   width: 100px;
+}
+
+#tvguide {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .show {
   margin: 0.5em;
   padding: 0.5em;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 2rem auto 13rem auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2rem auto;
   grid-gap: 0.5em;
+  border: 1px solid black;
 }
 
 .show-title,
@@ -40,8 +50,15 @@ img {
   grid-column: 1/-1;
 }
 
+.show-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 .show-summary {
   overflow-y: auto;
+  border: 1px solid green;
 }
 
 .show-season {
