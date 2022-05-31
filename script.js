@@ -24,7 +24,7 @@ findShow(show).then(showInfo=>{
 
 function getShowHTML(obj){
     if(obj.show.summary === null){
-        obj.show.summary = "Summary not found"
+        obj.show.summary = "Error: Summary not found"
     }
     return `
     <div class = "show">

@@ -38,7 +38,7 @@ img {
 
 #tvguide {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .show {
@@ -81,4 +81,10 @@ img {
 .season-link:hover,
 .season-link:focus {
   color: red;
+}
+
+@media (min-width: 600px) {
+  #tvguide {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
