@@ -19,21 +19,13 @@ findShow(show).then(showInfo=>{
         
 })
 
-function getSeasons(arr){
-    let htmlString = ""
-    for(let i=0;i<arr.length;i++){
-        htmlString += `
-        <div class="show-season">Number: ${arr[i].number}</div>`
-    }
-    return htmlString
-
-}
-
 function getShowHTML(obj){
-    let seasonsHTML = getSeasons(obj._embedded.seasons)
     return `
     <div class="show-img"><img src="${obj.image.medium}"></div>
     <div class="show-title">${obj.name}</div>
     <div class="show-summary">${obj.summary}</div>
-    ` + seasonsHTML;
+    ${obj._embedded.seasons.map(season =>{
+        return `<div class="show-season">Season: ${season.number}</div>`
+    }).join('')}
+    `;
 }
