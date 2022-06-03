@@ -36,20 +36,29 @@ img {
   font-size: 1.25rem;
 }
 
+.highlight{
+  background-color: yellow;
+}
+
 #tvguide {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .show {
   margin: 0.5em;
-  padding: 0.5em;
+  padding: 1.5em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 2rem auto;
   grid-gap: 0.5em;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 0.4rem;
+  background-color: blanchedalmond;
+}
+
+.show:nth-of-type(even){
+  background-color: lightblue;
 }
 
 .show-title,
@@ -67,6 +76,7 @@ img {
 .show-summary {
   overflow-y: auto;
   /* border: 1px solid green; */
+  line-height: 1.5em;
 }
 
 .show-season {

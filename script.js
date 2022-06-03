@@ -17,7 +17,7 @@ findShow(show).then(showInfo=>{
     // console.log(showInfo)
     // console.log(showInfo[0].show.image.medium)
     showHTML = showInfo.map(getShowHTML).join('')
-    document.getElementById("search-term").innerText = `Searching for: "${show}"`
+    document.getElementById("search-term").innerHTML = `<p>Searching for: <span class="highlight">"${show}"</span></p>`
     document.getElementById("tvguide").innerHTML = showHTML;
         
 })
