@@ -96,6 +96,24 @@ img {
 
 @media (min-width: 600px) {
   #tvguide {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  #tvguide {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  #tvguide {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1600px) {
+  #tvguide {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
